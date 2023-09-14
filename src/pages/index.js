@@ -59,7 +59,7 @@ export default function Home() {
                     </a>
                   ))}
                   <a
-                    href="#"
+                    href="/login"
                     className="font-medium text-indigo-600 hover:text-indigo-500"
                   >
                     Log in
@@ -143,7 +143,7 @@ export default function Home() {
                 </div>
                 <div className="mt-3 sm:mt-0 sm:ml-3">
                   <a
-                    href="#"
+                    href="/login"
                     className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-100 px-8 py-3 text-base font-medium text-indigo-700 hover:bg-indigo-200 md:py-4 md:px-10 md:text-lg"
                   >
                     Live demo
