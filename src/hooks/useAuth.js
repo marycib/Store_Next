@@ -2,7 +2,6 @@ import React, { useState, useContext, createContext } from "react";
 import Cookie from "js-cookie";
 import axios from "axios";
 import endPoints from "@services/api/";
-
 const AuthContext = createContext();
 
 export function ProviderAuth({ children }) {
@@ -29,6 +28,9 @@ function useProvideAuth() {
       { email, password },
       options,
     );
+    if (access_token) {
+      Cookie.set("token", access_token, { expires: 5 });
+    }
     console.log(access_token);
   };
 
