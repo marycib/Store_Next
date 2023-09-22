@@ -29,7 +29,11 @@ function useProvideAuth() {
       options,
     );
     if (access_token) {
+      const token = access_token.access_token;
       Cookie.set("token", access_token, { expires: 5 });
+      axios.defaults.headers.Authorization = `Bearer ${token}`;
+      const { data: user } = await axios.get(endPoints.auth.profile);
+      setUser(user);
     }
     console.log(access_token);
   };
